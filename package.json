@@ -1,0 +1,14 @@
+{
+  "name": "curtsy_portfolio",
+  "version": "1.0.0",
+  "description": "Responsive and professional portfolio that I have built to attract clients and showcase some of my projects. I hope you like it.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Steven Maina",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
