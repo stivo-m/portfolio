@@ -13,6 +13,7 @@ export default function ContactPage() {
         <div className="mt-10 space-y-3 text-muted">
           <p><a className="text-accent" href={`mailto:${site.email}`}>{site.email}</a></p>
           <p><a className="text-accent" href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn profile</a></p>
+          <p><a className="text-accent" href={site.github} target="_blank" rel="noreferrer">GitHub profile</a></p>
           <p>{site.location}</p>
         </div>
       </div>

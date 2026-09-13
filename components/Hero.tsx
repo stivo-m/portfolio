@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, stats } from "@/lib/content";
+import { site } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -15,20 +15,12 @@ export function Hero() {
         infrastructure, hardware integrations, and AI-enabled developer workflows.
       </p>
       <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-        <Link href="/case-studies" className="rounded-full bg-accent px-6 py-3 text-center text-sm font-semibold text-white transition-transform hover:-translate-y-0.5">
+        <Link href="/case-studies" className="rounded-full bg-accent px-6 py-3 text-center text-sm font-semibold !text-white no-underline transition-transform hover:-translate-y-0.5">
           View case studies
         </Link>
-        <Link href="/experience" className="rounded-full border border-line px-6 py-3 text-center text-sm font-semibold transition-colors hover:bg-surface">
+        <Link href="/experience" className="rounded-full border border-line px-6 py-3 text-center text-sm font-semibold text-foreground no-underline transition-colors hover:bg-surface">
           See experience
         </Link>
-      </div>
-      <div className="mt-20 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {stats.map((stat) => (
-          <div key={stat.label} className="rounded-[24px] border border-line bg-surface p-6">
-            <div className="text-3xl font-semibold tracking-tight">{stat.value}</div>
-            <div className="mt-2 text-sm text-muted">{stat.label}</div>
-          </div>
-        ))}
       </div>
     </section>
   );
