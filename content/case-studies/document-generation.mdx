@@ -1,0 +1,31 @@
+## Context
+
+Branded reports generated on demand with OpenXml, Skia, Gotenberg, Lambda, S3, and real-time delivery. This was part of a wider platform serving a national field-sales organization, where reliability and speed were directly connected to whether people trusted the tool in a customer conversation.
+
+## My role
+
+I owned the design and implementation across the application boundary: clarifying the problem, choosing the shape of the system, building the critical path, and making the operational trade-offs visible to the rest of the team.
+
+## Stack
+
+React and TypeScript on the client; .NET 8 services, PostgreSQL, AWS, and Terraform underneath. The stack was chosen for boring reasons: strong tooling, predictable deployment, and clear ownership at each boundary.
+
+## Architecture
+
+The system separates user interaction from long-running work. The browser asks for an operation, the API validates and records intent, durable infrastructure handles the expensive part, and the result returns through an observable, user-facing workflow.
+
+```text
+Browser → API boundary → durable work / data boundary → observable result
+```
+
+## The key decision
+
+The important decision was to keep the critical path explicit rather than hide it behind a clever abstraction. Each boundary has one job, failures are visible, and the design leaves room to scale the expensive part independently. The alternative was a simpler synchronous flow, but that would have made latency, retries, and partial failure the user’s problem.
+
+## Outcome
+
+The result was a production capability that made a previously manual or fragile workflow repeatable. More importantly, it gave the team a system they could reason about: measurable performance, traceable requests, and deployable pieces with small blast radii.
+
+## What I would do differently
+
+I would invest earlier in lightweight architecture decision records and representative load tests. The system worked, but making those constraints explicit sooner would have made onboarding and future trade-offs even faster.
