@@ -1,4 +1,4 @@
-import { skills, stats } from "@/lib/content";
+import { skills } from "@/lib/content";
 
 export const metadata = { title: "About" };
 
@@ -16,7 +16,6 @@ export default function AboutPage() {
           <p>I&apos;ve led teams, mentored engineers, reported directly to founders and executives, and delivered systems where performance, reliability, cost, and user trust all matter.</p>
         </div>
       </div>
-      <div className="mt-20 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{stats.map((stat) => <div key={stat.label} className="rounded-[24px] bg-surface p-6"><div className="text-3xl font-semibold tracking-tight">{stat.value}</div><p className="mt-2 text-sm text-muted">{stat.label}</p></div>)}</div>
       <section className="mt-24 rounded-[32px] bg-foreground p-8 text-white md:p-12">
         <h2 className="text-4xl font-semibold tracking-[-0.04em]">What I work with</h2>
         <div className="mt-8 flex flex-wrap gap-3">{skills.map((skill) => <span key={skill} className="rounded-full bg-white/10 px-4 py-2 text-sm text-white/80">{skill}</span>)}</div>

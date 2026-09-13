@@ -54,7 +54,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/50">Let&apos;s build something useful</p>
           <h2 className="mt-6 max-w-3xl text-5xl font-semibold tracking-[-0.05em] md:text-7xl">Have a hard problem? I&apos;d like to hear about it.</h2>
-          <Link href="/contact" className="mt-10 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5">Start a conversation</Link>
+          <Link href="/contact" className="mt-10 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold !text-black transition-transform hover:-translate-y-0.5">Start a conversation</Link>
         </div>
       </section>
     </>
